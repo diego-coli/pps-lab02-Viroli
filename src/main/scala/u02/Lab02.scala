@@ -47,6 +47,7 @@ object Lab02 extends App :
   def neg(pred: String => Boolean): String => Boolean =
     (s: String) => !pred(s)
 
+  // test
   val notEmpty1 = neg(empty)
   println(notEmpty1("hello"))     // return true
 
@@ -55,6 +56,7 @@ object Lab02 extends App :
     case vero if empty("") => _ != ""
     case falso if !empty("") => _ == ""
 
+  // test
   val notEmpty2 = negEmpty(empty)
   println(notEmpty2("hello"))     // return true
 
